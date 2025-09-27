@@ -152,8 +152,50 @@
             margin-top: 40px;
         }
         
+        /* CORRECCIÓN: Estilos para la sección de duración que estaba con problemas de contraste */
+        .duration-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--light);
+            border-radius: 15px;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .duration-section .section-title {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+        
+        .duration-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .duration-feature-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--primary);
+        }
+        
+        .duration-feature-title {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .duration-feature-title i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
         @media (max-width: 768px) {
-            .features-grid {
+            .features-grid, .duration-features-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -296,30 +338,35 @@
                     </div>
                     <p>Disponible <strong>Lunes a Sábado de 8:00 AM a 5:00 PM</strong></p>
                     <div class="badge">Soporte prioritario por canales como  WhatsApp, zoom, Google Meet con el cliente</div>
-                    
-                                
-                <div class="section-title">
-                    <i class="fas fa-file-contract"></i> Detalles del Programa 360°
                 </div>
                 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-title">
-                            <i class="fas fa-calendar-alt"></i> Duración
+                <!-- CORRECCIÓN: Sección de duración con contraste adecuado -->
+                <div class="duration-section">
+                    <div class="section-title">
+                        <i class="fas fa-file-contract"></i> Detalles del Programa 360°
+                    </div>
+                    
+                    <div class="duration-features-grid">
+                        <div class="duration-feature-card">
+                            <div class="duration-feature-title">
+                                <i class="fas fa-calendar-alt"></i> Duración
+                            </div>
+                            <p><strong>Ciclo de 31 días hábiles</strong> Planeación, dirección, gestión, evaluación, control total de los 9 programas de mercadeo.</p>
                         </div>
-                        <p><strong>Ciclo de 31 días hábiles</strong>Planeación, dirección,gestión, evaluación, control total de los 9 programas de mercadeo.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-title">
-                            <i class="fas fa-handshake"></i>Aseguramiento de servicios instalados</div>
-                        <p>Programa GBMA con Permanencia de <strong>180 días (6 meses)</strong> con posibilidad de cancelación a los 90 días con preaviso de 20 días por escrito formal.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-title">
-                            <i class="fas fa-cogs"></i>Metodología</div>
-                        <p>Sistema CMM con integración de comunicaciones,mercadeo unificado y maximización de alcance y conversiones.</p>
+                        
+                        <div class="duration-feature-card">
+                            <div class="duration-feature-title">
+                                <i class="fas fa-handshake"></i> Aseguramiento de servicios instalados
+                            </div>
+                            <p>Programa GBMA con Permanencia de <strong>180 días (6 meses)</strong> con posibilidad de cancelación a los 90 días con preaviso de 20 días por escrito formal.</p>
+                        </div>
+                        
+                        <div class="duration-feature-card">
+                            <div class="duration-feature-title">
+                                <i class="fas fa-cogs"></i> Metodología
+                            </div>
+                            <p>Sistema CMM con integración de comunicaciones, mercadeo unificado y maximización de alcance y conversiones.</p>
+                        </div>
                     </div>
                 </div>
             </div>
