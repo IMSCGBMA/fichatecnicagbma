@@ -42,11 +42,29 @@
             margin-bottom: 30px;
         }
         
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo-img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .logo-text {
+            text-align: center;
+        }
+        
+        .logo-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 5px;
+            font-style: italic;
         }
         
         h1 {
@@ -57,6 +75,8 @@
         .subtitle {
             font-size: 18px;
             opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .program-card {
@@ -72,12 +92,37 @@
             color: var(--white);
             padding: 25px;
             text-align: center;
+            position: relative;
         }
         
-        .program-price {
-            font-size: 28px;
+        .price-highlight {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFB300 100%);
+            color: #333;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 2px dashed #FF9800;
+        }
+        
+        .price-main {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 10px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .price-daily {
+            font-size: 24px;
             font-weight: 700;
+            margin: 10px 0;
+            color: #E65100;
+        }
+        
+        .price-description {
+            font-size: 18px;
             margin: 15px 0;
+            font-weight: 600;
         }
         
         .program-content {
@@ -194,6 +239,25 @@
             color: var(--primary);
         }
         
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
+        }
+        
         @media (max-width: 768px) {
             .features-grid, .duration-features-grid {
                 grid-template-columns: 1fr;
@@ -202,25 +266,49 @@
             h1 {
                 font-size: 28px;
             }
+            
+            .price-main {
+                font-size: 32px;
+            }
+            
+            .price-daily {
+                font-size: 20px;
+            }
+            
+            .logo-img {
+                max-width: 250px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">IMSC®</div>
+        <div class="logo-container">
+            <div class="logo-text">
+                <img src="https://i.ibb.co/mFyWTmwd/logo-innovaris.png" alt="IMSC Innovaris Marketing Solutions" class="logo-img">
+                <div class="logo-subtitle">INNOVARIS MARKETING SOLUTIONS CONSULTING GROUP</div>
+            </div>
+        </div>
         <h1>GestionBoost Marketing ADS Nivel 3</h1>
-        <p class="subtitle">Programa unificado de marketing para emprendedores y empresarios.</p>
+        <p class="subtitle">Programa unificado de marketing 360° para emprendedores y empresarios</p>
     </header>
     
     <div class="container">
         <div class="program-card">
             <div class="program-header">
-                <h2>Ficha Técnica del Programa ( plan de mercadeo para servicios)</h2>
-                 <h1>NO incluye presupuesto de pautas de anuncios en redes sociales </h1>
-                <div class="program-price">Instalación remota de un Departamento de mercadeo por solo $2'499.900/mes, solo 80 mil pesos diarios menos de lo que cuesta un servicio</div>
+                <h2>Ficha Técnica del Programa (Plan de Mercadeo para Servicios)</h2>
+                <h3>NO incluye presupuesto de pautas de anuncios en redes sociales</h3>
+                
+                <div class="price-highlight">
+                    <div class="price-main">$2'499.900/mes</div>
+                    <div class="price-daily">¡Solo 80 mil pesos diarios!</div>
+                    <div class="price-description">Instalación remota de un Departamento de mercadeo completo 360°</div>
+                    <a href="https://wa.me/573208973501?text=Hola,%20estoy%20interesado%20en%20el%20plan%20GestionBoost%20Marketing%20ADS%20Nivel%203%20360°" class="cta-button">¡Quiero este plan 360° completo!</a>
+                </div>
                
-                <div class="badge">Retorno de su inversión desde 1:1 no gana no pierde punto de equilibrio.  2:1 = Te traemos el doble de lo invertido y 3:1= te traemos 3 veces de lo que invirtio desde el primer mes dependiendo del alcance de la estrategia</div>
+                <div class="badge">Retorno de inversión: 1:1 (punto equilibrio), 2:1 (doble retorno), 3:1 (triple retorno)</div>
+                <div class="badge">Programa completo 360° con closer de ventas incluido</div>
             </div>
             
             <div class="program-content">
@@ -231,57 +319,56 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-title">
-                            <i class="fas fa-image"></i> Marketing de contenidos Piezas Publicitarias Estáticas
+                            <i class="fas fa-image"></i> Marketing de Contenidos - Piezas Publicitarias
                         </div>
-                        <p><strong>16 piezas publicitarias  mensuales en total </strong> adaptables a diferentes redes sociales, creados con programas profesionales de diseño gráfico.</p>
+                        <p><strong>16 piezas publicitarias mensuales en total</strong> adaptables a diferentes redes sociales, creadas con programas profesionales de diseño gráfico.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-history"></i> Historias Promocionales
                         </div>
-                        <p><strong>32 publicaciones en total  mensuales en todo el plan aqui incluye las 16 piezas  publicitarias y cada una se sube a historias</strong> diseñadas profesionalmente para promoción y interación.</p>
+                        <p><strong>32 publicaciones mensuales en total</strong> (incluye las 16 piezas publicitarias en historias) diseñadas profesionalmente para promoción e interacción.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-video"></i> Reels Promocionales
                         </div>
-                        <p><strong>4 reels mensuales estudios de casos o las mismos testimoniales va incluido dentro de las 16 piezas publicitarias (post)</strong> de hasta 20 segundos cada uno, editados con Adobe Premiere/After Effects para Instagram/Facebook.</p>
-                    </p>
-                        <p><em>Aclaración: En cuanto a la toma de contenidos el empresario acompaña y entrega sus estudios de caso para nuestro departamento de mercadeo. Así mismo realizamos la planificación y producción de material audiovisual.</em></p>
+                        <p><strong>4 reels mensuales</strong> de estudios de casos o testimonios (incluidos en las 16 piezas) de hasta 20 segundos cada uno, editados profesionalmente.</p>
+                        <p><em>Aclaración: El empresario acompaña y entrega estudios de caso para nuestro departamento de mercadeo. Realizamos planificación y producción de material audiovisual.</em></p>
                     </div>
                 </div>
                 
                 <div class="section-title">
-                    <i class="fas fa-bullhorn"></i> Programa de publicidad digital  para Campañas de promoción de servicios
+                    <i class="fas fa-bullhorn"></i> Programa de Publicidad Digital para Campañas de Servicios
                 </div>
                 
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-title">
-                            <i class="fas fa-hashtag"></i> Redes Sociales
+                            <i class="fas fa-hashtag"></i> Gestión de Redes Sociales
                         </div>
-                        <p>Gestión integral y estratégica de <strong>hasta 3 redes diferentes</strong> (FB, Instagram,WhatsApp) y 1 canales especializado.</p>
+                        <p>Gestión integral y estratégica de <strong>hasta 3 redes diferentes</strong> (Facebook, Instagram, WhatsApp) y 1 canal especializado.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-ad"></i> Campañas Publicitarias
                         </div>
-                        <p><strong>4-12 anuncios mensuales</strong> (según presupuesto) con desarollo plan estratégico y gestion de activación profesional y segmentación local avanzada personalizada.</p>
+                        <p><strong>4-12 anuncios mensuales</strong> (según presupuesto) con desarrollo de plan estratégico, gestión de activación profesional y segmentación local avanzada.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-star"></i> Campañas Especializadas
                         </div>
-                        <p>Campañas de recordación para clientes ideales, marketing estacional(navidad,habllowen,amor y amistad etc) y plan de protección de reputación incluido.</p>
+                        <p>Campañas de recordación para clientes ideales, marketing estacional (navidad, halloween, amor y amistad, etc.) y plan de protección de reputación incluido.</p>
                     </div>
                 </div>
                 
                 <div class="section-title">
-                    <i class="fas fa-chart-line"></i> Análisis y Optimización del plan de mercadeo en redes sociales.
+                    <i class="fas fa-chart-line"></i> Análisis y Optimización del Plan de Mercadeo
                 </div>
                 
                 <div class="features-grid">
@@ -289,19 +376,19 @@
                         <div class="feature-title">
                             <i class="fas fa-tasks"></i> Planes de Mejora
                         </div>
-                        <p>Comunicaciones masivas avanzadas, optimización constante basada en datos y metodología con enfoque sistemático (analisamos el proceso de campañas, identificamos mejoria, y tomamos acción predicible).</p>
+                        <p>Comunicaciones masivas avanzadas, optimización constante basada en datos y metodología con enfoque sistemático (análisis de procesos, identificación de mejoras, acción predictible).</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-file-alt"></i> Reportes de Rendimiento
                         </div>
-                        <p>Reportes periódicos con KPI's (indicadores de getión) detallados y recomendaciones estratégicas accionables según necesidades.</p>
+                        <p>Reportes periódicos con KPI's (indicadores de gestión) detallados y recomendaciones estratégicas accionables según necesidades.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
-                            <i class="fas fa-headset"></i> Consultoría Estratégica sobre el plan.
+                            <i class="fas fa-headset"></i> Consultoría Estratégica
                         </div>
                         <p><strong>45 minutos mensuales</strong> de acompañamiento experto enfocado en solución de problemas específicos.</p>
                     </div>
@@ -316,33 +403,34 @@
                         <div class="feature-title">
                             <i class="fas fa-palette"></i> Identidad de Marca
                         </div>
-                        <p><strong>2 propuestas de diseño branding diferentes para sus redes sociales</strong> con elementos profesionales y coherentes alineado con su (logo, colores, tipografía de la marca).</p>
+                        <p><strong>2 propuestas de diseño branding diferentes para redes sociales</strong> con elementos profesionales alineados con su identidad visual (logo, colores, tipografía).</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
                             <i class="fas fa-user-circle"></i> Optimización de Perfiles
                         </div>
-                        <p>Optimización de hasta 3 redes sociales (Facebook, Instagram, whatsapp) y uno especializado si se requiere con apertura de cuentas publicitarias si se requiere,biografía, enlaces e imágenes con diseño profesionales.</p>
+                        <p>Optimización de hasta 3 redes sociales (Facebook, Instagram, WhatsApp) y un canal especializado con apertura de cuentas publicitarias si se requiere.</p>
                     </div>
                     
                     <div class="feature-card">
                         <div class="feature-title">
-                            <i class="fas fa-comments"></i> Administración de comunidad
+                            <i class="fas fa-comments"></i> Administración de Comunidad
                         </div>
-                        <p>Respuesta y gestión de mensajes, moderación y respuesta a comentarios, y interacción comercial profesional de comunidad.</p>
+                        <p>Respuesta y gestión de mensajes, moderación y respuesta a comentarios, e interacción comercial profesional con la comunidad.</p>
                     </div>
                 </div>
                 
                 <div class="closer-section">
                     <div class="closer-title">
-                        <i class="fas fa-headset"></i> Tienes disponible un closer de ventas para Servicio de atención al cliente Remoto 
+                        <i class="fas fa-headset"></i> Servicio de Atención al Cliente Remoto con Closer de Ventas
                     </div>
                     <p>Disponible <strong>Lunes a Sábado de 8:00 AM a 5:00 PM</strong></p>
-                    <div class="badge">Soporte prioritario por canales como  WhatsApp api remoto, zoom, Google Meet con el cliente</div>
+                    <div class="badge">Soporte prioritario por WhatsApp API remoto, Zoom, Google Meet</div>
+                    <div class="badge" style="background: #4CAF50;">✅ INCLUYE closer de ventas profesional</div>
                 </div>
                 
-                <!-- CORRECCIÓN: Sección de duración con contraste adecuado -->
+                <!-- Sección de duración -->
                 <div class="duration-section">
                     <div class="section-title">
                         <i class="fas fa-file-contract"></i> Detalles del Programa 360°
@@ -353,23 +441,27 @@
                             <div class="duration-feature-title">
                                 <i class="fas fa-calendar-alt"></i> Duración
                             </div>
-                            <p><strong>Ciclo de 31 días hábiles</strong> Planeación, dirección, gestión, evaluación, control total de los 9 programas de mercadeo.</p>
+                            <p><strong>Ciclo de 31 días hábiles</strong> Planeación, dirección, gestión, evaluación, control total de los programas de mercadeo.</p>
                         </div>
                         
                         <div class="duration-feature-card">
                             <div class="duration-feature-title">
-                                <i class="fas fa-handshake"></i> Aseguramiento de servicios instalados
+                                <i class="fas fa-handshake"></i> Aseguramiento de Servicios
                             </div>
-                            <p>Programa (plan de mercadeo ) GBMA III con Permanencia de <strong>180 días (6 meses)</strong> con posibilidad de cancelación a los 90 días con preaviso de 20 días por escrito formal. Esto es importante por que los planes de mercadeo no son a 1 mes son minimo a 6 meses con evaluación cada 3 meses</p>
+                            <p>Programa GBMA III con permanencia de <strong>180 días (6 meses)</strong> con posibilidad de cancelación a los 90 días con preaviso de 20 días por escrito formal.</p>
                         </div>
                         
                         <div class="duration-feature-card">
                             <div class="duration-feature-title">
-                                <i class="fas fa-cogs"></i> Nuestra Metodología GBMA III
+                                <i class="fas fa-cogs"></i> Metodología GBMA III
                             </div>
                             <p>Sistema CMM con integración de comunicaciones, mercadeo unificado y maximización de alcance y conversiones.</p>
                         </div>
                     </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://wa.me/573208973501?text=Hola,%20estoy%20interesado%20en%20el%20plan%20GestionBoost%20Marketing%20ADS%20Nivel%203%20360°" class="cta-button">¡Solicita tu Departamento de Mercadeo 360° por solo 80 mil pesos diarios!</a>
                 </div>
             </div>
         </div>
@@ -377,9 +469,9 @@
         <div class="footer">
             <h3>IMSC® I Innovaris Marketing Solutions Consulting Group</h3>
             <p>info@innovarismkt.online | innovarismarketingsolutions@gmail.com | +57 320-897-3501 | www.innovarismkt.online</p>
+            <p style="margin-top: 15px; font-style: italic;">"Innova, sincroniza, triunfa - el impulso que tu empresa necesita!"</p>
         </div>
     </div>
 </body>
 </html>
-
 
